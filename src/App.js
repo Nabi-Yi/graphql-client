@@ -1,10 +1,14 @@
-import './App.css';
+import {BrowserRouter, Routes, Route } from "react-router-dom";
+import Movies from "./routes/Movies";
+import Movie from "./routes/Movie";
 
-function App() {
-  return (
-    <div>
-    </div>
-  );
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path = "/" element={<Movies />}/>
+                <Route path = "/movie/:id" element={<Movie />}/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
-
-export default App;
